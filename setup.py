@@ -1,11 +1,19 @@
-#!/usr/bin/env python
+""" Setup script
+"""
 
-from distutils.core import setup
-from catkin_pkg.python_setup import generate_distutils_setup
+from setuptools import setup
 
-d = generate_distutils_setup(
-    packages=['urdf_parser_py', 'urdf_parser_py.xml_reflection'],
-    package_dir={'': 'src'}
+setup(
+    name='urdf_parser',
+    version='0.1',
+    author='Andrew Berger',
+    author_email='andrew@dexai.com',
+    description='Standalone Python URDF parser as native Python package',
+    url='https://github.com/DexaiRobotics/urdf_parser',
+    packages=['urdf_parser'],
+    python_requires='>=2.7',  # TODO: not sure if this is true
+    install_requires=[
+        'pyyaml',
+        'lxml'
+    ],
 )
-
-setup(**d)
