@@ -1,4 +1,4 @@
-from urdf_parser_py.xml_reflection.basics import *
+from urdf_parser.xml_reflection.basics import *
 import sys
 import copy
 
